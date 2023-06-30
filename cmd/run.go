@@ -38,7 +38,7 @@ import (
 // runCmd represents the run command
 var runCmd = &cobra.Command{
 	Use:   "run",
-	Short: "Start the IGMPQD daemon",
+	Short: "Start the IGMPQD daemon to send IGMP Queries.",
 	Long: `
 `,
 	Run: func(cmd *cobra.Command, args []string) {
@@ -126,6 +126,7 @@ func sendPacket() {
 	if err := r.WriteTo(iph, payload, cm); err != nil {
 		log.Fatal(err)
 	}
+	debug("Sent packet done.")
 
 }
 

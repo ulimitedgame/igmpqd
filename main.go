@@ -22,8 +22,7 @@ package main
 
 import (
 	"strconv"
-
-	"github.com/jmylchreest/igmpqd/cmd"
+	"github.com/ulimitedgame/go-igmpqd/cmd"
 )
 
 func main() {
